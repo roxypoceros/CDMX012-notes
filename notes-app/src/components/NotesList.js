@@ -37,21 +37,20 @@ function NotesList({ theNotes, edit }) {
 
   const deleteNote = async (id) => {
     const noteDoc = doc(db, "notesCreated", id);
-/*     if (window.confirm ("Confirm if you want to delete the note")) {
-    await deleteDoc(noteDoc);
-    } */
-    try{
-      await deleteDoc(noteDoc)
-    } catch (err) {
-      alert(err)
-    }
+    /* if (window.confirm ("Confirm if you want to delete the note"))
+    {await deleteDoc(noteDoc);  }*/
+        try{
+          await deleteDoc(noteDoc)
+        } catch (err) {
+          alert(err)
+        }
   };
 
   function refreshPage() {
     window.location.reload(false);
   }
 
-  
+
 
   return (
     <div>
@@ -70,7 +69,8 @@ function NotesList({ theNotes, edit }) {
                 <button
                   onClick={() => {
                     deleteNote(note.id);
-                    refreshPage();
+                    setTimeout(() => refreshPage(), 1000);
+                    
                   }}
                   className="btnDelete"
                 >
@@ -78,16 +78,16 @@ function NotesList({ theNotes, edit }) {
                 </button>{" "}
               </h4>
               <h4 className="textOfNote"> {note.Text}</h4>
-              
+
               <section className="editBtnSection">
-              <button
-                className="btnEdit"
-                onClick={() => {
-                  getNoteIdHandler(note);
-                }}
-              >
-                <TiPencil />
-              </button>
+                <button
+                  className="btnEdit"
+                  onClick={() => {
+                    getNoteIdHandler(note);
+                  }}
+                >
+                  <TiPencil />
+                </button>
               </section>
 
 
