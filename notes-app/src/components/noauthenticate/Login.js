@@ -21,7 +21,7 @@ const Login = ({ LoginWithGoogle }) => {
         </button>
       </section>
       <footer>
-        2022 | <BsLinkedin /> Roxana Hernández
+      <p>2022 | <a href="https://www.linkedin.com/in/roxypoceros/" target="_blank" rel="noreferrer">  <BsLinkedin /> Roxana Hernández </a>   </p> 
       </footer>
       <img
         className="backgroundImage"

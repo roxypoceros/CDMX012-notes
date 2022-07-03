@@ -71,15 +71,38 @@ h1 {
 margin-top: 16px;
 }
 
+
+
 footer {
     font-family: 'Mulish', sans-serif;
+    margin-right: 8px;
     color: #894C3A;
+    font-weight: bolder;
+    font-size: 1em;
+    margin: 10px;
     position: absolute;
+
     right: 24px;
     bottom: 24px;
-    font-weight: bolder;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:link {
+    color: #894C3A;
+  }
+  
+  a:active {
+    color: #894C3A;
+  }
+  
+  a:visited {
+    color: #894C3A;
+    text-shadow: 8px 8px 20px rgba(255, 255, 255, 0.922);
 
-}
+  }
 
 /* VERSION PARA CELULAR */
 /* On screens that are 428px or less */
@@ -109,6 +132,8 @@ footer {
     
     }
 }
+
+
 
 /* VERSION PARA ESCRITORIO */
 /* On screens that are 1195px or more */
