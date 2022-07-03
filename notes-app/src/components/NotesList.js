@@ -37,10 +37,21 @@ function NotesList({ theNotes, edit }) {
 
   const deleteNote = async (id) => {
     const noteDoc = doc(db, "notesCreated", id);
-    if (window.confirm ("Confirm if you want to delete the note")) {
+/*     if (window.confirm ("Confirm if you want to delete the note")) {
     await deleteDoc(noteDoc);
+    } */
+    try{
+      await deleteDoc(noteDoc)
+    } catch (err) {
+      alert(err)
     }
   };
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
+  
 
   return (
     <div>
@@ -59,6 +70,7 @@ function NotesList({ theNotes, edit }) {
                 <button
                   onClick={() => {
                     deleteNote(note.id);
+                    refreshPage();
                   }}
                   className="btnDelete"
                 >

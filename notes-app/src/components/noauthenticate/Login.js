@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Login.css";
 import "../styles/Button.css";
 import { FcGoogle } from "react-icons/fc";
-import { AiFillGithub } from "react-icons/ai";
+import { BsLinkedin } from "react-icons/bs";
 
 const Login = ({ LoginWithGoogle }) => {
   return (
@@ -21,7 +21,7 @@ const Login = ({ LoginWithGoogle }) => {
         </button>
       </section>
       <footer>
-        2022 | <AiFillGithub /> Roxana Hernández
+        2022 | <BsLinkedin /> Roxana Hernández
       </footer>
       <img
         className="backgroundImage"

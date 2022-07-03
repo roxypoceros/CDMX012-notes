@@ -13,7 +13,7 @@ function ANewNote({ getNotes, currentNote = {} }) {
   const date = new Date();
 
   useEffect(() => {
-    console.log("HOLA", currentNote);
+    /* console.log("HOLA", currentNote); */
     setNewTitle(currentNote.Title);
     setNewText(currentNote.Text);
   }, [currentNote]);
@@ -57,15 +57,14 @@ function ANewNote({ getNotes, currentNote = {} }) {
             setNewTitle(event.target.value);
           }}
         ></input>
-        <input
+        <textarea
           className="noteText"
-          type="text"
           placeholder="Write your ideas"
           value={newText}
           onChange={(event) => {
             setNewText(event.target.value);
           }}
-        ></input>
+        ></textarea>
 
         <button className="btnCreate" onClick={createNewNote}>
           Save

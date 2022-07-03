@@ -6,7 +6,7 @@ import "./styles/Button.css";
 import "./styles/NavBar.css";
 
 import { logOut } from "../lib/firebaseAuth.js";
-/* import Greeting from "./Greeting"; */
+import DateAndHour from "./DateAndHour";
 
 function NavBar() {
   return (
@@ -19,7 +19,11 @@ function NavBar() {
           alt="Rosetta Logo"
         ></img>
 
-        {/* Saludo y foto de usuario */}
+        {/* Día y hora */}
+
+        <section>
+        <DateAndHour/>
+        </section>
 
         {/* BUTTON LOGOUT */}
         <button
