@@ -46,8 +46,9 @@ Taviraj:wght@400;500;600;700;800&
 }
 
 .twoSectionsContainer {
-  
-  height: 100vh;
+  position: absolute;
+  top: 12%;
+  height: 88%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -133,7 +134,7 @@ h2 {
 /* On screens that are 428px or less */
 @media only screen and (max-width: 428px) {
   .twoSectionsContainer {
-    height: 100vh;
+    height: 88%;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -146,12 +147,11 @@ h2 {
 
   .btnLogout {
     position: absolute;
-    margin-left: 30%;
+    margin-left: 8px;
   }
 
   .mainContainerNotes {
     height: 100vh;
-
     z-index: 7;
     display: flex;
     flex-direction: column;
@@ -169,11 +169,12 @@ h2 {
   }
   .rightSide {
     width: 100%;
-
     z-index: 10;
-
     margin: 8px;
-
     flex-basis: 50%;
+  }
+  ::-webkit-scrollbar{
+    width: 8px
+    
   }
 }
